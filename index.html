@@ -13,42 +13,64 @@
       color: #333;
     }
 
-    /* Header */
     header {
       background: #24292e;
       color: white;
-      padding: 25px;
+      padding: 30px;
       text-align: center;
     }
 
-    /* Navigation Bar */
-    nav {
-      display: flex;
-      justify-content: center;
-      background: #0366d6;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: white;
-      padding: 14px 20px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.2s;
-    }
-
-    nav a:hover {
-      background: #024f9c;
-    }
-
-    /* Content Container */
-    .container {
-      max-width: 900px;
+    /* Grid of assignment cards */
+    .grid {
+      max-width: 1100px;
       margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 0 20px;
+    }
+
+    .card {
       background: white;
-      padding: 30px;
-      border-radius: 8px;
+      border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+    }
+
+    /* Featured Final Project */
+    .final-project {
+      max-width: 1100px;
+      margin: 60px auto;
+      background: white;
+      border-left: 8px solid #0366d6;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    }
+
+    .final-project img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 20px;
     }
 
     footer {
@@ -65,40 +87,67 @@
 
   <header>
     <h1>My Course Portfolio</h1>
-    <p>Assignments 1–6 and Final Project</p>
+    <p>Assignments 1–6 + Featured Final Project</p>
   </header>
 
-  <nav>
-    <a href="#a1">Assignment 1</a>
-    <a href="#a2">Assignment 2</a>
-    <a href="#a3">Assignment 3</a>
-    <a href="#a4">Assignment 4</a>
-    <a href="#a5">Assignment 5</a>
-    <a href="#a6">Assignment 6</a>
-    <a href="#final">Final Project</a>
-  </nav>
+  <!-- Assignment Grid -->
+  <div class="grid">
 
-  <div class="container">
-    <h2 id="a1">Assignment 1</h2>
-    <p>Write your description or link here.</p>
+    <div class="card">
+      <img src="thumbnail1.jpg" alt="Assignment 1 Thumbnail">
+      <div class="card-content">
+        <h3>Assignment 1</h3>
+        <p>Write your description or link here.</p>
+      </div>
+    </div>
 
-    <h2 id="a2">Assignment 2</h2>
-    <p>Write your description or link here.</p>
+    <div class="card">
+      <img src="thumbnail2.jpg" alt="Assignment 2 Thumbnail">
+      <div class="card-content">
+        <h3>Assignment 2</h3>
+        <p>Write your description or link here.</p>
+      </div>
+    </div>
 
-    <h2 id="a3">Assignment 3</h2>
-    <p>Write your description or link here.</p>
+    <div class="card">
+      <img src="thumbnail3.jpg" alt="Assignment 3 Thumbnail">
+      <div class="card-content">
+        <h3>Assignment 3</h3>
+        <p>Write your description or link here.</p>
+      </div>
+    </div>
 
-    <h2 id="a4">Assignment 4</h2>
-    <p>Write your description or link here.</p>
+    <div class="card">
+      <img src="thumbnail4.jpg" alt="Assignment 4 Thumbnail">
+      <div class="card-content">
+        <h3>Assignment 4</h3>
+        <p>Write your description or link here.</p>
+      </div>
+    </div>
 
-    <h2 id="a5">Assignment 5</h2>
-    <p>Write your description or link here.</p>
+    <div class="card">
+      <img src="thumbnail5.jpg" alt="Assignment 5 Thumbnail">
+      <div class="card-content">
+        <h3>Assignment 5</h3>
+        <p>Write your description or link here.</p>
+      </div>
+    </div>
 
-    <h2 id="a6">Assignment 6</h2>
-    <p>Write your description or link here.</p>
+    <div class="card">
+      <img src="thumbnail6.jpg" alt="Assignment 6 Thumbnail">
+      <div class="card-content">
+        <h3>Assignment 6</h3>
+        <p>Write your description or link here.</p>
+      </div>
+    </div>
 
-    <h2 id="final">Final Project</h2>
+  </div>
+
+  <!-- Featured Final Project -->
+  <div class="final-project" id="final">
+    <h2>Final Project</h2>
     <p>Write your description or link here.</p>
+    <img src="final-thumbnail.jpg" alt="Final Project Thumbnail">
   </div>
 
   <footer>

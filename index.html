@@ -20,18 +20,33 @@
       text-align: center;
     }
 
+    /* Navigation Bar */
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     /* Grid of assignment cards */
     .grid {
-  max-width: 1100px;
-  margin: 40px auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-template-rows: repeat(2, auto);   /* 2 rows */
-  gap: 25px;
-  padding: 0 20px;
-  justify-items: center;
-}
-
+      max-width: 1100px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 25px;
+      padding: 0 20px;
+      justify-items: center;
+    }
 
     .card {
       background: white;
@@ -46,12 +61,12 @@
     }
 
     .card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border: 1px solid #000; /* thin black border */
-  border-radius: 4px;     /* optional: softens the corners */
-}
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border: 1px solid #000;
+      border-radius: 4px;
+    }
 
     .card-content {
       padding: 20px;
@@ -70,6 +85,11 @@
       padding: 40px;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0,0,0,0.15);
+      transition: transform 0.25s ease;
+    }
+
+    .final-project:hover {
+      transform: translateY(-7px) scale(1.01);
     }
 
     .final-project img {
@@ -85,14 +105,6 @@
       background: #24292e;
       color: white;
     }
-    .final-project {
-  transition: transform 0.25s ease;
-}
-
-.final-project:hover {
-  transform: translateY(-7px) scale(1.01);
-}
-
   </style>
 </head>
 
@@ -101,69 +113,78 @@
   <header>
     <h1>My Course Portfolio</h1>
     <p>Assignments 1–6 + Featured Final Project</p>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shortbio.html">Short Bio</a>
+      <a href="NoahBolteResume.pdf" target="_blank">Resume/CV</a>
+      <a href="mailto:noahcbol.2000@gmail.com">Contact</a>
+    </nav>
   </header>
 
   <!-- Assignment Grid -->
   <div class="grid">
 
- <!-- Assignment 1 -->
-<a href="https://observablehq.com/d/3d7dccd1d899d520" target="_blank" style="text-decoration:none; color:inherit;">
-  <div class="card">
-    <img src="assignment1thumbnail.png" alt="Becoming Familiar With Importing and Manipulating Data in ObservableHQ">
-    <div class="card-content">
-      <h3>Becoming Familiar With Importing and Manipulating Data in ObservableHQ</h3>
-    </div>
-  </div>
-</a>
-
-<!-- Assignment 2 -->
-<a href="https://observablehq.com/d/37347ed16e26d5ef" target="_blank" style="text-decoration:none; color:inherit;">
-  <div class="card">
-    <img src="assignment2thumbnail.png" alt="Classification and Colors - Percent Black Population in Iowa Census Tracts">
-    <div class="card-content">
-      <h3>Classification and Colors - Percent Black Population in Iowa Census Tracts</h3>
-    </div>
-  </div>
-</a>
-
-<!-- Assignment 3 -->
-<a href="https://observablehq.com/d/be5b84f60eb7c3f6" target="_blank" style="text-decoration:none; color:inherit;">
-  <div class="card">
-    <img src="assignment3thumbnail.png" alt="Choropleth Mapping - Percent Black Populatiom for Iowa Census Tracts">
-    <div class="card-content">
-      <h3>Choropleth Mapping - Percent Black Populatiom for Iowa Census Tracts</h3>
-    </div>
-  </div>
-</a>
-
-<!-- Assignment 4 -->
-<a href="https://observablehq.com/d/57080883847834bf" target="_blank" style="text-decoration:none; color:inherit;">
-  <div class="card">
-    <img src="assignment4thumbnail.png" alt="Graduated Symbol Mapping - Percent Black Population for Iowa Census Tracts">
-    <div class="card-content">
-      <h3>Graduated Symbol Mapping - Percent Black Population for Iowa Census Tracts</h3>
-    </div>
-  </div>
-</a>
-
-<!-- Assignment 5 -->
-<a href="https://observablehq.com/d/9f1a1a3202364f72" target="_blank" style="text-decoration:none; color:inherit;">
-  <div class="card">
-    <img src="assignment5thumbnail.png" alt="Des Moines Metro: Income and Percent Black Population by Census Tract">
-    <div class="card-content">
-      <h3>Des Moines Metro: Income and Percent Black Population by Census Tract</h3>
-    </div>
-  </div>
-</a>
-
-
-    <div class="card">
-      <img src="thumbnail6.jpg" alt="Assignment 6 Thumbnail">
-      <div class="card-content">
-        <h3>Assignment 6</h3>
-        <p>Write your description or link here.</p>
+    <!-- Assignment 1 -->
+    <a href="https://observablehq.com/d/3d7dccd1d899d520" target="_blank" style="text-decoration:none; color:inherit;">
+      <div class="card">
+        <img src="assignment1thumbnail.png" alt="Becoming Familiar With Importing and Manipulating Data in ObservableHQ">
+        <div class="card-content">
+          <h3>Becoming Familiar With Importing and Manipulating Data in ObservableHQ</h3>
+        </div>
       </div>
-    </div>
+    </a>
+
+    <!-- Assignment 2 -->
+    <a href="https://observablehq.com/d/37347ed16e26d5ef" target="_blank" style="text-decoration:none; color:inherit;">
+      <div class="card">
+        <img src="assignment2thumbnail.png" alt="Classification and Colors - Percent Black Population in Iowa Census Tracts">
+        <div class="card-content">
+          <h3>Classification and Colors - Percent Black Population in Iowa Census Tracts</h3>
+        </div>
+      </div>
+    </a>
+
+    <!-- Assignment 3 -->
+    <a href="https://observablehq.com/d/be5b84f60eb7c3f6" target="_blank" style="text-decoration:none; color:inherit;">
+      <div class="card">
+        <img src="assignment3thumbnail.png" alt="Choropleth Mapping - Percent Black Population for Iowa Census Tracts">
+        <div class="card-content">
+          <h3>Choropleth Mapping - Percent Black Population for Iowa Census Tracts</h3>
+        </div>
+      </div>
+    </a>
+
+    <!-- Assignment 4 -->
+    <a href="https://observablehq.com/d/57080883847834bf" target="_blank" style="text-decoration:none; color:inherit;">
+      <div class="card">
+        <img src="assignment4thumbnail.png" alt="Graduated Symbol Mapping - Percent Black Population for Iowa Census Tracts">
+        <div class="card-content">
+          <h3>Graduated Symbol Mapping - Percent Black Population for Iowa Census Tracts</h3>
+        </div>
+      </div>
+    </a>
+
+    <!-- Assignment 5 -->
+    <a href="https://observablehq.com/d/9f1a1a3202364f72" target="_blank" style="text-decoration:none; color:inherit;">
+      <div class="card">
+        <img src="assignment5thumbnail.png" alt="Des Moines Metro: Income and Percent Black Population by Census Tract">
+        <div class="card-content">
+          <h3>Des Moines Metro: Income and Percent Black Population by Census Tract</h3>
+        </div>
+      </div>
+    </a>
+
+    <!-- Assignment 6 (Flow Map Page) -->
+    <a href="flowmap.html" style="text-decoration:none; color:inherit;">
+      <div class="card">
+        <img src="thumbnail6.png" alt="Flow Map Assignment Thumbnail">
+        <div class="card-content">
+          <h3>Flow Mapping – Assignment 6</h3>
+        </div>
+      </div>
+    </a>
 
   </div>
 
